@@ -16,14 +16,24 @@
 # 4 дн 15 час 9 мин 13 сек
 
 duration = float(input('Введите продолчительность периода в секундах: '))
-
+res = ' '
 if duration >= 86400:
     days = duration // 86400
     days = str(days)
     res = days + ' дней '
     duration = duration % 86400
-elif duration >= 3600:
+if duration >= 3600:
     hours = duration // 3600
     hours = str(hours)
     res = res + hours + ' часов '
+    duration = duration % 3600
+if duration >= 60:
+    minuts = duration // 60
+    minuts = str(minuts)
+    res = res + minuts + 'минут'
+    duration = duration % 60
+if:
+    duration = str(duration)
+    res = res + duration + 'секунд'
+print(res)
 
