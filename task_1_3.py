@@ -10,14 +10,28 @@
 # 100 процентов
 
 n = 1
-while n <= 100:
-    if n >= 10 and n<= 20:
-        print(n + ' процентов')
-    remains = n % 10
-    if remains == 1:
-        print(n+' процент')
-    elif remains >= 2 or remains<5:
-        print(n+' процента')
+while n < 21:
+    if n == 1:
+        n = str(n)
+        print(n + ' процент')
+    elif n < 5:
+        n = str(n)
+        print(n + ' процента')
     else:
+        n = str(n)
         print(n + ' процентов')
-    n +=1
+    n = int(n)
+    n = n + 1
+while n <= 100:
+    excess = n % 10
+    if excess == 1:
+        n = str(n)
+        print(n + ' процент')
+    elif excess < 5 and excess != 0:
+        n = str(n)
+        print(n + ' процента')
+    else:
+        n = str(n)
+        print(n + ' процентов')
+    n = int(n)
+    n = n + 1
