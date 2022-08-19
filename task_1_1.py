@@ -15,25 +15,24 @@
 # duration = 400153
 # 4 дн 15 час 9 мин 13 сек
 
-duration = float(input('Введите продолчительность периода в секундах: '))
+duration = float(input('Введите продолжительность периода в секундах: '))
 res = ' '
 if duration >= 86400:
-    days = duration // 86400
+    days = int(duration // 86400)
     days = str(days)
-    res = days + ' дней '
+    res = days + ' дн '
     duration = duration % 86400
 if duration >= 3600:
-    hours = duration // 3600
+    hours = int(duration // 3600)
     hours = str(hours)
-    res = res + hours + ' часов '
+    res = res + hours + ' час '
     duration = duration % 3600
 if duration >= 60:
-    minuts = duration // 60
+    minuts = int(duration // 60)
     minuts = str(minuts)
-    res = res + minuts + 'минут'
+    res = res + minuts + ' мин '
     duration = duration % 60
-if:
-    duration = str(duration)
-    res = res + duration + 'секунд'
+duration = int(duration)
+duration = str(duration)
+res = res + duration + ' сек'
 print(res)
-
